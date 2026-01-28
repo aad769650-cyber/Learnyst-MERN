@@ -31,6 +31,24 @@ export default function AdminDashboard() {
   const [deleteItem,setDelete]=useState({})
   const [data,setData]=useState([])
   const [editForm, setEditForm] = useState({ name: '', email: ''});
+const [searchData,setSearchData]=useState([])
+
+console.log(searchQuery);
+
+useEffect(()=>{
+  // console.log("in");
+  
+const searchedData=searchData.filter((curr)=>{
+  const user=curr.name.toLowerCase().includes(searchQuery.toLowerCase())
+// console.log(user);
+return user
+})
+// console.log(searchedData);
+setData(searchedData)
+
+  
+
+},[searchQuery])
 
   const handleEdit = (user) => {
     setEditingId(user.id);
@@ -60,6 +78,7 @@ const resp=await axios.get("/user/all")
 console.log(resp.data[0]);
 
 setData(resp.data[0])
+setSearchData(resp.data[0])
 }
 
 useEffect(()=>{
@@ -154,7 +173,7 @@ useEffect(()=>{
                   <p className="text-sm font-semibold text-gray-800">Admin User</p>
                   <p className="text-xs text-gray-500">bakr@gmail.com</p>
                 </div>
-                <div className="w-10 h-10 bg-linear-to-br from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold">
+                <div className="w-10 h-10 bg-linear-to-br from-indigo-500 to-purple-500 rounded-full hidden  md:flex items-center justify-center text-white font-semibold">
                   AU
                 </div>
               </div>
@@ -213,7 +232,7 @@ useEffect(()=>{
                 </button>
                 <button className="flex items-center space-x-2 px-4 py-2 bg-linear-to-r from-indigo-600 to-purple-600 text-white rounded-xl hover:shadow-lg transition-all">
                   <Plus className="w-4 h-4" />
-                  <span className="text-sm font-medium"><NavLink to={"/register"}>Register User</NavLink></span>
+                  <span className="text-sm font-medium"><NavLink to={"/login"}>Register User</NavLink></span>
                 </button>
               </div>
             </div>

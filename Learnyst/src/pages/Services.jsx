@@ -77,7 +77,7 @@ useEffect(()=>{
             Future-Proof Your <span className="text-blue-600">Digital Ecosystem</span>
           </h1>
           <p className="max-w-2xl mx-auto text-lg text-slate-600 mb-10">
-            Lranyst delivers high-performance solutions designed to scale. We blend 
+            Learnyst delivers high-performance solutions designed to scale. We blend 
             technical excellence with strategic thinking to solve your toughest challenges.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -94,7 +94,7 @@ useEffect(()=>{
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {services.map((service, index) => (
             <div key={index} className="group p-8 rounded-2xl border border-slate-100 bg-white hover:shadow-2xl hover:border-blue-100 transition-all duration-300">
-              <div className="mb-6 p-3 bg-blue-50 w-fit rounded-xl group-hover:bg-blue-600 group-hover:text-white transition-colors">
+              <div className="mb-6 p-3 bg-blue-50 w-fit rounded-xl  group-hover:text-white transition-colors">
                 {service.icon}
               </div>
               <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
@@ -106,12 +106,12 @@ useEffect(()=>{
         </div>
       </section>
 
-      {/* Why Choose Lranyst Section */}
+      {/* Why Choose Learnyst Section */}
       <section className="py-20 bg-slate-900 text-white">
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2">
-              <h2 className="text-4xl font-bold mb-6">Why Lranyst is the right partner for your growth.</h2>
+              <h2 className="text-4xl font-bold mb-6">Why Learnyst is the right partner for your growth.</h2>
               <p className="text-slate-400 mb-8 text-lg">
                 We don't just write code; we build business value. Our methodology 
                 ensures your product is launched on time and built to last.
@@ -152,7 +152,7 @@ useEffect(()=>{
         <div className="container mx-auto px-6 max-w-4xl">
           <h2 className="text-4xl font-bold mb-8">Ready to transform your business?</h2>
           <p className="text-xl text-slate-600 mb-10">
-            Let’s discuss your goals and how Lranyst can help you achieve them.
+            Let’s discuss your goals and how Learnyst can help you achieve them.
           </p>
           <button className="bg-slate-900 text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform">
          <NavLink to={"/register"}>Get in Touch</NavLink>

@@ -20,6 +20,25 @@ export default function AdminDashboard() {
 const [update,setUpdate]=useState({})
 
 
+const [searchData,setSearchData]=useState([])
+
+console.log(searchQuery);
+
+useEffect(()=>{
+  // console.log("in");
+  
+const searchedData=searchData.filter((curr)=>{
+  const user=curr.name.toLowerCase().includes(searchQuery.toLowerCase())
+// console.log(user);
+return user
+})
+// console.log(searchedData);
+setData(searchedData)
+
+  
+
+},[searchQuery])
+
 
 
   const handleEdit = (user) => {
@@ -49,6 +68,7 @@ apiCall()
     const resp = await axios.get("/user/allRegistered");
     console.log(resp.data[0]);
     setData(resp.data[0]);
+    setSearchData(resp.data[0]);
   }
 
   useEffect(() => {

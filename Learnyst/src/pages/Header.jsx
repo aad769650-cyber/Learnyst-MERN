@@ -85,10 +85,10 @@ transition={{
 <div className='bg-gray-100 p-3 '>
    <div className='flex items-center gap-6 md:mx-10 mx-5  '>
     <div className=''>
-         <img src="/logo.png" alt="Logo of Learnyst" className='w-7 h-7 shrink-0'/>
+         <img src="/logo.png" alt="Logo of Learnyst" className='w-7 h-7 shrink-0 animate-bounce'/>
 
     </div>
-     <div className='font-semibold'>Learn. Think. Grow</div>
+     <div className='font-semibold '>Learn. Think. Grow</div>
    </div>
 
 
@@ -104,7 +104,7 @@ transition={{
 
 
   <div className=' w-290 flex justify-center md:justify-between items-center'>
-      <div className=' flex justify-between md:justify-center items-center gap-4 w-[85%] md:w-fit'>
+      <div className=' flex justify-between md:justify-center items-center gap-4 w-[85%] md:w-fit '>
          <img src="/MainLogo.svg" alt="Logo text" className='w-30'/>
 
 
@@ -117,10 +117,10 @@ Links.map((curr)=>{
     return(
         <li key={curr.id} className='hover:text-emerald-300  cursor-pointer text-lg transition-all '>
            <NavLink to={curr.path}     className={({ isActive }) =>
-          `font-medium transition-colors
+          ` transition-colors font-bold 
            ${isActive
              ? "text-[#006006]"
-             : "text-blue-500 hover:text-[#006006]"}`
+             : "bg-linear-to-r from-black via-slate-600 to-gray-800  bg-clip-text text-transparent"}`
         }>{curr.name}</NavLink>
         </li>
     )
@@ -129,7 +129,7 @@ Links.map((curr)=>{
 </ul>
 
 
-<div className='md:hidden block cursor-pointer ' onClick={()=>setIsOpen(!isOpen)}>
+<div className='md:hidden block cursor-pointer  ' onClick={()=>setIsOpen(!isOpen)}>
 <Menu />
 
 
@@ -147,7 +147,7 @@ Links.map((curr)=>{
     </div>
 
 
-    <div className='hidden md:flex justify-center items-center  gap-4'>
+    <div className='hidden md:flex justify-center items-center  gap-4 '>
          <button className=" sm:flex p-2 rounded-xl hover:bg-red-50 text-red-600 transition-colors"
               onClick={
 ()=>{
@@ -155,7 +155,7 @@ Links.map((curr)=>{
   logOut()
                     
 }}>
-                <LogOut className="w-5 h-5" />
+                <LogOut className="w-5 h-5 animate-pulse " />
               </button>
   <NavLink
     to="/login"

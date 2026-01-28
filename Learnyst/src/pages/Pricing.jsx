@@ -1,5 +1,6 @@
 import { Check } from 'lucide-react'
 import React from 'react'
+import { NavLink } from 'react-router';
 
 const Pricing = () => {
     const Benefits = [
@@ -97,7 +98,7 @@ const Pricing = () => {
 
 
 <div className='font-semibold  text-center p-2 rounded bg-gray-200 text-gray-800 hover:bg-white cursor-pointer transition-all duration-200'>
-Get Started
+<NavLink to={"register"}>Get Started</NavLink>
 </div>
 
 <div className='text-sm'>

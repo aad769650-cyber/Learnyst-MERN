@@ -16,12 +16,12 @@ const TypeWritter = () => {
  transition={{duration:.5,ease:"linear"}}
  
  className='text-white text-2xl md:text-4xl md:text-[42px] font-bold text-center'>
-    Learn to create fast, responsive websites using 
+    Learn to create Fast, Responsive Websites using 
 </motion.div>
 
 
 <div className='flex justify-center items-center p-4 text-4xl md:text-5xl bg-linear-to-r from-pink-500 via-purple-500 to-blue-500 
-                     bg-clip-text text-transparent'>
+                     bg-clip-text text-transparent font-bold'>
      <TypeAnimation
   sequence={Type}
 

@@ -1,5 +1,6 @@
 
 import React from 'react'
+import { NavLink } from 'react-router'
 
 const BookDemo = () => {
   return (
@@ -17,7 +18,7 @@ Get instant access to our state of the art project and join the waitlist.
 </div>
 
 <div className='p-2 border hover:text-gray-900 hover:bg-white transition-all duration-300 text-white font-semibold rounded-md cursor-pointer'>
-    Book Demo
+   <NavLink to={"register"}> Book Demo</NavLink>
 </div>
 </div>
 

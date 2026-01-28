@@ -8,7 +8,7 @@ const HeroSection = () => {
 
      
   return (
-    <section    className='bg-linear-to-r from-[#131D31] via-black to-indigo-800" inset-0 bg-cover bg-center ' >
+    <section    className='bg-linear-to-r from-[#131D31] via-black to-indigo-900" inset-0 bg-cover bg-center ' >
     <div className='flex justify-center items-center  flex-col gap-4 h-[90vh] text-white'>
 
 
@@ -37,7 +37,7 @@ const HeroSection = () => {
 
 
 
-            <button className='border border-gray-500   p-2 rounded-md  border-t-indigo-600 border-y-cyan-500 hover:bg-sky-700 transition-all duration-300 hover:text-white cursor-pointer text-xl'><NavLink to={"/register"}>Book Demo</NavLink></button>
+            <button className='border border-gray-500   p-2 rounded-md  border-t-indigo-600 border-y-cyan-500 hover:bg-red-900 hover transition-all duration-300   cursor-pointer text-xl'> <NavLink to={"/register"}>Book Demo</NavLink></button>
         </div>
 
 
