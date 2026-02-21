@@ -1,22 +1,16 @@
-import React from 'react'
-import { useEffect } from 'react';
-import { replace, useNavigate } from 'react-router';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-export const ProtectedRoute = ({children}) => {
+export const ProtectedRoute = ({ children }) => {
+  const isAuth = localStorage.getItem("isAuthenticate");
+  const navigate = useNavigate();
 
-
-    const isAuth=localStorage.getItem("isAuthenticate")
-const navigate=useNavigate()
-
-    console.log("isAuth",isAuth);
-
-
-
-useEffect(()=>{
-        if(!isAuth){
-        return navigate("/adminLogin",replace)
+  useEffect(() => {
+    if (!isAuth) {
+      navigate("/adminLogin", { replace: true });
     }
-    
-})
-  return (children )
-}
+  }, [isAuth, navigate]);
+
+  // Only render children if authenticated
+  return isAuth ? children : null;
+};

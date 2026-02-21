@@ -4,7 +4,7 @@ import {
   Edit2, Trash2, Plus, Download, Filter, MoreVertical,
   Users, ShoppingCart, DollarSign, TrendingUp
 } from 'lucide-react';
-import { NavLink, useNavigate } from 'react-router';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import axios from 'axios';
 import { toast } from "sonner"
@@ -35,55 +35,55 @@ const [searchData,setSearchData]=useState([])
 
 console.log(searchQuery);
 
-useEffect(()=>{
-  // console.log("in");
+// useEffect(()=>{
+//   // console.log("in");
   
-const searchedData=searchData.filter((curr)=>{
-  const user=curr.name.toLowerCase().includes(searchQuery.toLowerCase())
-// console.log(user);
-return user
-})
-// console.log(searchedData);
-setData(searchedData)
+// const searchedData=searchData.filter((curr)=>{
+//   const user=curr.name.toLowerCase().includes(searchQuery.toLowerCase())
+// // console.log(user);
+// return user
+// })
+// // console.log(searchedData);
+// setData(searchedData)
 
   
 
-},[searchQuery])
+// },[searchQuery])
 
-  const handleEdit = (user) => {
-    setEditingId(user.id);
-    setEditForm({ name: user.name, email: user.email,});
-  };
+//   const handleEdit = (user) => {
+//     setEditingId(user.id);
+//     setEditForm({ name: user.name, email: user.email,});
+//   };
 
-  const handleSave = (id) => {
+//   const handleSave = (id) => {
 
-    setEditingId(null);
-  };
+//     setEditingId(null);
+//   };
 
-  const handleDelete = async(id) => {
+//   const handleDelete = async(id) => {
 
-const resp=await axios.delete(`https://learnyst-mern-backend.onrender.com/user/delete/${id}`,id)
+// const resp=await axios.delete(`https://learnyst-mern-backend.onrender.com/user/delete/${id}`,id)
 
-console.log(id,resp);
-    setDelete(resp)
-  };
+// console.log(id,resp);
+//     setDelete(resp)
+//   };
 
 
-const apiCall=async()=>{
+// const apiCall=async()=>{
 
-console.log("called Admin Panel");
+// console.log("called Admin Panel");
 
-const resp=await axios.get("https://learnyst-mern-backend.onrender.com/user/all")
+// const resp=await axios.get("https://learnyst-mern-backend.onrender.com/user/all")
 
-console.log("resp",resp.data[0]);
+// console.log("resp",resp.data[0]);
 
-setData(resp.data[0])
-setSearchData(resp.data[0])
-}
+// setData(resp.data[0])
+// setSearchData(resp.data[0])
+// }
 
-useEffect(()=>{
-    apiCall()
-},[deleteItem])
+// useEffect(()=>{
+//     apiCall()
+// },[deleteItem])
 
 
 

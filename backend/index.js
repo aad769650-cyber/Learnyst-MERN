@@ -10,11 +10,29 @@ const { GenerateAccessToken, VerifyRefresh } = require('./auth/auth')
 app.use(cookieParser())
 app.use(express.json())
 const cors=require("cors")
-app.use(cors({
-    origin:"https://learnyst-mern.onrender.com",
-    methods:["GET","POST","PATCH","DELETE"],
-    credentials:true
-}))
+const allowedOrigins = [
+  "http://localhost:5173",  // Vite
+  "https://learnyst-mern.onrender.com" // production
+];
+
+app.use(cors(
+    {
+         origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+        methods:["GET","POST","PATCH","DELETE"],
+          credentials: true,    
+    }
+))
+
+
+
+
+
 app.use("/uploads",express.static("./uploads"))
 
 
