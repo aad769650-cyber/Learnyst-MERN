@@ -9,8 +9,12 @@ const { router } = require("./routes/userRouter")
 const { GenerateAccessToken, VerifyRefresh } = require('./auth/auth')
 app.use(cookieParser())
 app.use(express.json())
-
-
+const cors=require("cors")
+app.use(cors({
+    origin:"https://learnyst-mern.onrender.com",
+    methods:["GET","POST","PATCH","DELETE"],
+    credentials:true
+}))
 app.use("/uploads",express.static("./uploads"))
 
 
@@ -38,6 +42,6 @@ const Verified=VerifyRefresh(isValid)
     
 })
 
-app.listen(8000,()=>{
+app.listen(process.env.PORT,()=>{
     console.log("server is listening ...")
 })

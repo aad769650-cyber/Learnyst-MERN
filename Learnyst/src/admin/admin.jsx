@@ -62,7 +62,7 @@ setData(searchedData)
 
   const handleDelete = async(id) => {
 
-const resp=await axios.delete(`/user/delete/${id}`,id)
+const resp=await axios.delete(`https://learnyst-mern-backend.onrender.com/user/delete/${id}`,id)
 
 console.log(id,resp);
     setDelete(resp)
@@ -73,7 +73,7 @@ const apiCall=async()=>{
 
 console.log("called");
 
-const resp=await axios.get("/user/all")
+const resp=await axios.get("https://learnyst-mern-backend.onrender.com/user/all")
 
 console.log(resp.data[0]);
 
