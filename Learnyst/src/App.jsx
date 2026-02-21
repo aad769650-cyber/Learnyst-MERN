@@ -7,11 +7,11 @@ import Home from "./pages/Home";
 import SignupForm from "./pages/Sigup";
 import LoginForm from "./pages/Login";
 import Services from "./pages/Services";
-import AdminLoginForm from "./admin/adminLogin";
 import AdminDashboard from "./admin/admin";
 import {ProtectedRoute} from "./admin/protectedRoute"
 import LeranystRegistration from "./pages/Register";
 import AdminDashboardRegistered from "./admin/RegisteredUserAdmin";
+import AdminLogin from "./admin/adminLogin";
 export default function App() {
 
 const router =createBrowserRouter([{
@@ -45,7 +45,7 @@ const router =createBrowserRouter([{
 ,
 {
   path:"adminLogin",
-  element:<AdminLoginForm></AdminLoginForm>
+  element:<AdminLogin></AdminLogin>
 },
 
 {
