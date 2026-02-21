@@ -4,7 +4,7 @@ import {
   Edit2, Trash2, Plus, Download, Filter, MoreVertical,
   Users, ShoppingCart, DollarSign, TrendingUp
 } from 'lucide-react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router';
 import { useEffect } from 'react';
 import axios from 'axios';
 import { toast } from "sonner"

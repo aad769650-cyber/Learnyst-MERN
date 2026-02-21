@@ -5,7 +5,7 @@ import {
   Users, ShoppingCart, DollarSign, TrendingUp, Calendar,
   Mail, Clock, CheckCircle, XCircle, Activity
 } from 'lucide-react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router';
 import axios from 'axios';
 import { toast } from "sonner"
 
