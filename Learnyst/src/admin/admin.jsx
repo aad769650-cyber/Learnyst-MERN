@@ -71,11 +71,11 @@ console.log(id,resp);
 
 const apiCall=async()=>{
 
-console.log("called");
+console.log("called Admin Panel");
 
 const resp=await axios.get("https://learnyst-mern-backend.onrender.com/user/all")
 
-console.log(resp.data[0]);
+console.log("resp",resp.data[0]);
 
 setData(resp.data[0])
 setSearchData(resp.data[0])
