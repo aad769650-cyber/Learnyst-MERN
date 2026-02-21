@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Mail, Lock, Eye, EyeOff, Shield } from 'lucide-react';
-import {   Navigate, useNavigate } from 'react-router';
+import {   Navigate, useNavigate } from 'react-router-dom';
 
 export default function AdminLoginForm() {
   const [showPassword, setShowPassword] = useState(false);
